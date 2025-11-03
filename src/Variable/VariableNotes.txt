@@ -1,0 +1,7 @@
+Variable :- Variable is the name given to memory location for easily storing the data and
+             ,and accessing the data.
+
+Variable types in java
+1.Local variable:-
+Local variable are such variable which are created and initialize within the method.
+local variable can not be used outside the method it will give the error.
