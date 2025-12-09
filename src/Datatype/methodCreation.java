@@ -17,7 +17,7 @@ public class methodCreation {
     }
     void div()
     {
-        System.out.println("This is test method ");
+        System.out.println("a"+'a');
     }
     public static void main(String[] args) {
      methodCreation calc = new methodCreation();
@@ -27,6 +27,7 @@ public class methodCreation {
      System.out.println(sub1);
      calc.mul(5,250);
      calc.div();
+        System.out.println("a"+(int)'a');
     }
 }
 

@@ -1,0 +1,31 @@
+What is datatype?
+Datatype is used to specify the size and value stored in variable.
+There are two types of datatypes in java
+1.Primitive Datatype
+2.Nonprimitive Datatype
+
+Primitive Datatype:- -> Primitive datatype further divided into 8 types.
+                     -> Whenever we use primitive datatype the value is directly stored in memory which is easily accessible
+                     -> Primitive data types are pre-defined data types.
+                     -> There are total 8 primitive data types in Java i.e. boolean, char, byte, short, int, long, float and double.
+                     -> Primitive data types have fixed memory sizes for example char always occupies 2 byte of memory, int
+                        occupies 4 byte of memory etc.
+
+
+             Data Type	 Default Size	 Default Value	  Range	              Corresponding Wrapper Classes
+
+             byte        1 byte          0               -128 to 127
+
+             short       2 byte          0               -32768 to 32767
+
+             int         4 byte          0               2^n-1 to 2^n-1 -1
+
+             long        8 byte          0               2^n-1 to 2^n-1 -1
+
+             float       4 byte          0.0f
+
+             double      8 byte          0.0d
+
+             char        2 byte          /u0000           0 to 65535
+
+             boolean     1 byte          false
