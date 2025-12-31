@@ -28,7 +28,24 @@ class ArrayListDemo {
           System.out.print(array[i]+" ");
       }
     }
-Object
+
+    @Override
+    public String toString() {
+        if (initialSize == 0) {
+            return "[]";
+        }
+
+        StringBuilder sb = new StringBuilder("[");
+        for (int i = 0; i < initialSize; i++) {
+            sb.append(array[i]);
+            if (i < initialSize - 1) {
+                sb.append(", ");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+
 }
 
 public class CustomArrayList {
@@ -49,7 +66,7 @@ public class CustomArrayList {
        list.add(20);
        list.add(20);
 
-       list.display();
+        System.out.println(list);
 
     }
 
