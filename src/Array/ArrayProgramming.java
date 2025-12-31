@@ -142,12 +142,11 @@ public class ArrayProgramming {
         }
         int max2=arr[0];
         for(int i=1;i< arr.length;i++){
-               if(arr[i]==max){
-                   continue;
-               } else{
-                 max2=arr[i];
+               if(arr[i]<max && arr[i]>max2){
+                   max2=arr[i];
                }
             }
+        System.out.println(max);
         System.out.println(max2);
     }
 
