@@ -1,0 +1,10 @@
+object class is the parent class of every class in java .
+Whenever a programmer is create any class it is get extended by object clasa by default.
+
+Q1. What is the need of Object class?
+Answer;-Object is the superclass of all the classes.
+        it shares common methods with all the object
+        for object comparison it is helpful
+        its supports polymorphism.
+
+
