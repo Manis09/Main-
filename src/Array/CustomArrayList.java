@@ -3,71 +3,65 @@ package Array;
 import java.util.Arrays;
 
 class ArrayListDemo {
-    int defaultCapacity=10;
-    int initialSize=0;
-    Object[] array={};
-    public ArrayListDemo() {
-       array=new Object[defaultCapacity];
+    private final int defaultCap=10;
+    private int size;
+    private Object[] array;
+
+    //Arraylist object creation by constructor
+    public ArrayListDemo(){
+        array=new Object[defaultCap];
     }
 
+    //Add object in element
     public void add(Object o){
-        if(initialSize== array.length){
-            int newCapacity=(array.length*3/2)+1;
-            array=Arrays.copyOf(array,newCapacity);
+        ensureCapacity();
+        array[size++]=o;
+    }
+
+    //to add element on specific element
+    public void addOn(int index,Object o){
+        if(index<0 || index>size){
+            throw new IndexOutOfBoundsException("Provide vaild index under "+size);
         }
-        array[initialSize++]=o;
+        ensureCapacity();
+        for(int i=size;i>=index;i--){
+            array[i]=array[i-1];
+        }
+        array[index]=o;
+        size++;
+    }
+    public void ensureCapacity(){
+        if(size>=array.length){
+            int newSize=(size*3/2)+1;
+            array=Arrays.copyOf(array,newSize);
+        }
+    }
+
+    public void display(){
+        System.out.print("[ ");
+        for(int i=0;i<=size-1;i++){
+            System.out.print(array[i]+" ");
+        }
+        System.out.println("]");
     }
     public int size(){
-      return initialSize;
+        return size;
     }
-    public void remove(Object obj){
-
-    }
-    public void display(){
-      for(int i=0;i<size();i++){
-          System.out.print(array[i]+" ");
-      }
-    }
-
-    @Override
-    public String toString() {
-        if (initialSize == 0) {
-            return "[]";
-        }
-
-        StringBuilder sb = new StringBuilder("[");
-        for (int i = 0; i < initialSize; i++) {
-            sb.append(array[i]);
-            if (i < initialSize - 1) {
-                sb.append(", ");
-            }
-        }
-        sb.append("]");
-        return sb.toString();
-    }
-
 }
 
 public class CustomArrayList {
     public static void main(String[] args) {
-
-        ArrayListDemo list = new ArrayListDemo();
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-       list.add(20);
-
-        System.out.println(list);
-
+        ArrayListDemo list=new ArrayListDemo();
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.add(10);
+        list.addOn(2,20);
+        System.out.println(list.size());
+        list.display();
     }
 
 }
