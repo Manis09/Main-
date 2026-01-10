@@ -33,6 +33,7 @@ public class ArrayProgramming {
         System.out.println("The sum of array is:--" + sum);
     }
 
+
     //Find minimum and maximum element in array
     public static void smallLargest() {
         int[] arr = {5, 4, 1, 3, 2, 6};
